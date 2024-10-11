@@ -1,0 +1,103 @@
+*{
+    font-family: "Playwrite DE Grund", serif;
+  font-optical-sizing: auto;
+  font-weight: 300px;
+  font-style: italic;
+
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    border: double goldenrod;
+    padding: 10px;
+
+}
+img {
+    border-radius: 50%;
+    height: 100px;
+}
+
+header .btn {
+    font-size: 25px;
+    margin-top: 50px;
+    margin-left: 30%;
+    list-style: none;
+    list-style: none;
+}
+
+#btn {
+    border: 200px;
+    margin-left: 30%;
+    padding: 15px 30px;
+    font-size: 30px
+}
+
+#btn:hover{
+    background-color: darkslategray;
+    color: goldenrod;
+}
+
+
+
+
+
+.side {
+    height: 780px;
+    width: 250px;
+    border: double 2px goldenrod;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+.content    {
+    background-color: darkslategrey;
+    display: flex;
+
+}
+div{
+    margin-left: 1%;
+    
+}
+.social-link{
+    background-color: white;
+    border: dashed 2px goldenrod;
+    font-size: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 210px;
+     margin-top: 25rem;
+     padding: 10px 15px;
+     height: 60px;
+     justify-content: center;
+     gap: 10px;
+     
+}
+
+#anchorList {
+    display: none;
+    margin-top: 10%;
+  }
+  
+  .ls {
+    display: block;
+    margin-bottom: 10px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .ls:hover {
+    background-color: darkslategray;
+    color: goldenrod;
+  }
+  
+  .side .hidden {
+    display: none;
+    font-size: 30px;
+    justify-content: center;
+    margin-top: 5%;
+  }
+
+#social-link a:hover{
+    background-color: goldenrod;
+
+}
