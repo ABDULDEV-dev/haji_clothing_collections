@@ -1,41 +1,53 @@
 *{
-    font-family: "Playwrite DE Grund", serif;
+    font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
-  font-weight: 300px;
-  font-style: italic;
+  font-weight: 200px;
+  font-style: normal;
 
 }
 
 header{
     display: flex;
     flex-wrap: wrap;
-    border: double goldenrod;
     padding: 10px;
 
 }
-img {
+.fav {
     border-radius: 50%;
     height: 100px;
 }
+#btn1 {
+    font-size: 40px;
+    height: 60px;
+    border: 2px solid goldenrod;
+    border-radius: 30%;
+    margin-left: 1rem;
+    transition: 1.2s;
 
-header .btn {
-    font-size: 25px;
-    margin-top: 50px;
-    margin-left: 30%;
-    list-style: none;
-    list-style: none;
+
+}
+
+#btn1:hover{
+  transform: rotate(360deg);
 }
 
 #btn {
-    border: 200px;
+    border: solid darkgoldenrod 2px;
+    /* margin-top: 3rem; */
     margin-left: 30%;
     padding: 15px 30px;
-    font-size: 30px
+    font-size: 30px;
+    transition: 0.2s;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: 60px;
+    justify-content: center;
 }
 
 #btn:hover{
     background-color: darkslategray;
     color: goldenrod;
+    transform: scale3d(1.1, 1.1, 1.1);
 }
 
 
@@ -46,30 +58,27 @@ header .btn {
     height: 780px;
     width: 250px;
     border: double 2px goldenrod;
-    background-color: aliceblue;
+    background-color: white;
     cursor: pointer;
 }
 .content    {
-    background-color: darkslategrey;
     display: flex;
+    flex-wrap: wrap;
 
 }
-div{
-    margin-left: 1%;
-    
-}
+
 .social-link{
     background-color: white;
-    border: dashed 2px goldenrod;
     font-size: 50px;
     display: flex;
     flex-wrap: wrap;
     width: 210px;
-     margin-top: 25rem;
+     margin-top: 2rem;
      padding: 10px 15px;
      height: 60px;
      justify-content: center;
      gap: 10px;
+     transition: 0.9s;
      
 }
 
@@ -83,11 +92,14 @@ div{
     margin-bottom: 10px;
     color: black;
     text-decoration: none;
+    transition: 0.4s;
+
   }
   
   .ls:hover {
     background-color: darkslategray;
     color: goldenrod;
+    transform: scale3d(1.1, 1.1, 1.1);
   }
   
   .side .hidden {
@@ -98,6 +110,38 @@ div{
   }
 
 #social-link a:hover{
-    background-color: goldenrod;
+    transform: scale3d(1.2, 1.1, 1.1)
+}
 
+#phase{
+  display: flex;
+  background-color: darkslategray;
+  width: 79%;
+  padding: 15px 32px;
+  margin-left: 0.5rem;
+  color: #E0FFFF;
+}
+
+hr {
+  background-color: gold;
+  height: 10px;
+}
+
+.pic1{
+  width: 400px;
+  height: 600px;
+  margin-left: 20rem;
+}
+
+h2 {
+  width: 40vw;
+  font-size: 30px;
+}
+
+p{
+  font-size: 20px;
+}
+article{
+  line-height: 1.9;
+  justify-content: center;
 }

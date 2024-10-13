@@ -12,4 +12,6 @@ document.getElementById('btn').addEventListener('click', function() {
       this.textContent = 'SERVICES'; // Change button text
     }
   });
-  
+var name = musa 
+
+ console.log('welcome' + name)
