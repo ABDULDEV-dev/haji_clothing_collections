@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -40,4 +40,60 @@ a:hover {
 
   <script src="./JS/index.js"></script>
 </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Image Slider</title>
+    <style>
+        #image-container img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-container">
+        <img id="slider-image" src="./image/pic3.jpg" alt="Image 1">
+    </div>
+
+    <script>
+       // Function to adjust layout based on window size
+       function adjustLayout() {
+            const content = document.getElementById('content');
+
+            if (window.innerWidth <= 767) {
+                // For small screens (mobile), stack boxes vertically
+                content.style.flexDirection = 'column';
+            } else {
+                // For larger screens (tablet and desktop), display boxes in a row
+                content.style.flexDirection = 'row';
+            }
+        }
+
+        // Run the function when the window is resized
+        window.addEventListener('resize', adjustLayout);
+
+        // Run the function when the page loads
+        window.addEventListener('load', adjustLayout);
+        // Array of image sources
+        const images = ['./image/pic1.jpeg', './image/pic2.jpg', './image/HAJI.webp'];
+
+        let currentIndex = 0;
+
+        // Function to change the image
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length; // Move to next image, loop back if at end
+            document.getElementById('slider-image').src = images[currentIndex]; // Update the image source
+        }
+
+        // Automatically change the image every 10 seconds (10000 milliseconds)
+        setInterval(changeImage, 10000);
+    </script>
+</body>
 </html>
+
