@@ -49,3 +49,66 @@ document.getElementById('btn').addEventListener('click', function() {
           content.style.flexDirection = 'row'; 
       }
   }
+
+  // Get elements
+const btnToggleMenu = document.getElementById('btn');
+const servicesSection = document.getElementById('services');
+const btnToggleTheme = document.getElementById('btn1');
+const socialLinks = document.getElementById('social-link');
+
+// Function to toggle the services section
+btnToggleMenu.addEventListener('click', () => {
+    servicesSection.classList.toggle('hidden'); // Show/hide services menu
+    servicesSection.style.transition = "all 0.5s ease-in-out";
+});
+
+// Function to enable Dark Mode toggle
+btnToggleTheme.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
+
+// Dark mode styles (added via JavaScript)
+const addDarkModeStyles = () => {
+    const styleElement = document.createElement('style');
+    styleElement.innerHTML = `
+        body.dark-mode {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        .side, #btn, footer {
+            background-color: #333333;
+        }
+        .ls:hover, #btn:hover, .footer-social a:hover {
+            color: #FFD700;
+        }
+    `;
+    document.head.appendChild(styleElement);
+};
+
+// Add dark mode styles to the page
+addDarkModeStyles();
+
+// Mobile navigation handler (open/close menu)
+const toggleMobileMenu = () => {
+    if (window.innerWidth <= 768) {
+        servicesSection.classList.add('hidden'); // Hide the menu by default
+    } else {
+        servicesSection.classList.remove('hidden'); // Show on larger screens
+    }
+};
+
+// Trigger mobile menu toggle on window resize
+window.addEventListener('resize', toggleMobileMenu);
+
+// Call initially to set up menu visibility
+toggleMobileMenu();
+
+// For smoother scrolling behavior (when navigating between sections)
+document.querySelectorAll('.ls').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});

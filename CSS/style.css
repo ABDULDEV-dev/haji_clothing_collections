@@ -108,7 +108,15 @@ height: 100vh;
     color: goldenrod;
     transform: scale3d(1.1, 1.1, 1.1);
   }
-  
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
   .side .hidden {
     display: none;
     font-size: 30px;
@@ -181,3 +189,57 @@ article{
 #strong{
   color: gold;
 }
+
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-content, .footer-social, .footer-contact {
+  flex-basis: 30%;
+  margin-bottom: 20px;
+}
+
+.footer-content h3, .footer-contact h4, .footer-social h4 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+.footer-social{
+  font-size: 25px;
+  transition: 1.3s ease-in-out;
+}
+
+.footer-social:hover{
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+.footer-social a {
+  margin: 0 10px;
+  font-size: 24px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  transform: scale3d(1.2, 1.2, 1.2);
+}
+
+.footer-bottom {
+  border-top: 1px solid #34495e;
+  padding-top: 10px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
