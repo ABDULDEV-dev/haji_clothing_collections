@@ -50,43 +50,6 @@ document.getElementById('btn').addEventListener('click', function() {
       }
   }
 
-  // Get elements
-const btnToggleMenu = document.getElementById('btn');
-const servicesSection = document.getElementById('services');
-const btnToggleTheme = document.getElementById('btn1');
-const socialLinks = document.getElementById('social-link');
-
-// Function to toggle the services section
-btnToggleMenu.addEventListener('click', () => {
-    servicesSection.classList.toggle('hidden'); // Show/hide services menu
-    servicesSection.style.transition = "all 0.5s ease-in-out";
-});
-
-// Function to enable Dark Mode toggle
-btnToggleTheme.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-});
-
-// Dark mode styles (added via JavaScript)
-const addDarkModeStyles = () => {
-    const styleElement = document.createElement('style');
-    styleElement.innerHTML = `
-        body.dark-mode {
-            background-color: #121212;
-            color: #f0f0f0;
-        }
-        .side, #btn, footer {
-            background-color: #333333;
-        }
-        .ls:hover, #btn:hover, .footer-social a:hover {
-            color: #FFD700;
-        }
-    `;
-    document.head.appendChild(styleElement);
-};
-
-// Add dark mode styles to the page
-addDarkModeStyles();
 
 // Mobile navigation handler (open/close menu)
 const toggleMobileMenu = () => {

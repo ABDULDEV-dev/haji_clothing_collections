@@ -45,6 +45,8 @@ header{
     transition: 0.2s;
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5%;
     height: 60px;
     justify-content: center;
 }
